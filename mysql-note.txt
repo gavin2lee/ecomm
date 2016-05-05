@@ -1,0 +1,23 @@
+mysql -u root -p
+
+show databases;
+show tables;
+show engines;
+drop database ecomm1;
+use ecomm;
+describe table_name;
+
+create the database:
+ecomm utf-8
+
+create database  if not exists ecomm1 CHARACTER SET=utf8;
+or
+create schema if not exists ecomm CHARACTER SET utf8;
+
+create user 'test'@'%' identified by 'test';
+drop user 'test'@'%';
+
+create user 'gavin'@'%' identified by '123456';
+grant all privileges on *.* to 'gavin'@'%' with grant option;
+show grants for 'gavin'@'%';
+GRANT ALL PRIVILEGES ON *.* TO 'monty'@'%' WITH GRANT OPTION;
