@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class BaseEntry {
 	private String oid;// UUID
-	private Date createTime;
-	private Date updateTime;
+	private Date createAt;
+	private Date updateAt;
 
 	public String getOid() {
 		return oid;
@@ -15,20 +15,20 @@ public class BaseEntry {
 		this.oid = oid;
 	}
 
-	public Date getCreateTime() {
-		return createTime;
+	public Date getCreateAt() {
+		return createAt;
 	}
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
+	public void setCreateAt(Date createTime) {
+		this.createAt = createTime;
 	}
 
-	public Date getUpdateTime() {
-		return updateTime;
+	public Date getUpdateAt() {
+		return updateAt;
 	}
 
-	public void setUpdateTime(Date updateTime) {
-		this.updateTime = updateTime;
+	public void setUpdateAt(Date updateTime) {
+		this.updateAt = updateTime;
 	}
 
 }
