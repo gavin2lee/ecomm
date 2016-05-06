@@ -8,8 +8,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.gl.ecomm.domain.PesudoDomain;
-import com.gl.ecomm.domain.PesudoDomainMapper;
+import com.gl.ecomm.mapper.PesudoDomainMapper;
+import com.gl.ecomm.model.PesudoDomain;
 
 public class MyBatisXmlBoot {
 	

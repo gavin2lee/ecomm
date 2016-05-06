@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.gl.ecomm.domain.PesudoDomainMapper">
-  <select id="selectPesudoDomain" resultType="com.gl.ecomm.domain.PesudoDomain">
+<mapper namespace="com.gl.ecomm.mapper.PesudoDomainMapper">
+  <select id="selectPesudoDomain" resultType="com.gl.ecomm.model.PesudoDomain">
     select * from pesudo_domain where oid = #{oid}
   </select>
 </mapper>

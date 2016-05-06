@@ -10,9 +10,9 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.ibatis.transaction.TransactionFactory;
 import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 
-import com.gl.ecomm.domain.DummyModel;
-import com.gl.ecomm.domain.DummyModelMapper;
 import com.gl.ecomm.infra.DataSourceFactory;
+import com.gl.ecomm.mapper.DummyModelMapper;
+import com.gl.ecomm.model.DummyModel;
 
 public class MyBatisJavaBoot {
 	

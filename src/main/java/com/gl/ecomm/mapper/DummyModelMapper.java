@@ -1,8 +1,10 @@
-package com.gl.ecomm.domain;
+package com.gl.ecomm.mapper;
 
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
+
+import com.gl.ecomm.model.DummyModel;
 
 
 public interface DummyModelMapper {

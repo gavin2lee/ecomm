@@ -1,4 +1,4 @@
-package com.gl.ecomm.domain;
+package com.gl.ecomm.model;
 
 import java.io.Serializable;
 import java.util.Date;

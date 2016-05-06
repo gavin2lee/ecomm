@@ -17,6 +17,6 @@
 		</environment>
 	</environments>
 	<mappers>
-		<mapper resource="com/gl/ecomm/domain/PesudoDomainMapper.xml" />
+		<mapper resource="com/gl/ecomm/mapper/PesudoDomainMapper.xml" />
 	</mappers>
 </configuration>

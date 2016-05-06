@@ -1,4 +1,4 @@
-package com.gl.ecomm.domain;
+package com.gl.ecomm.model;
 
 public class PesudoDomain extends BaseEntry {
 	private String name;
