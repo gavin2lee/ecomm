@@ -11,7 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import com.gl.ecomm.domain.PesudoDomain;
 import com.gl.ecomm.domain.PesudoDomainMapper;
 
-public class MyBatisBoot {
+public class MyBatisXmlBoot {
 	
 	public static void testPesudoDomainOps(){
 		String resource = "mybatis-config.xml";
