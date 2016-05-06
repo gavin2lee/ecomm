@@ -5,11 +5,11 @@
 <configuration>
 	<properties resource="mybatis-config.properties">
 	</properties>
-	
+
 	<typeAliases>
-        <typeAlias alias="PesudoDomain" type="com.gl.ecomm.model.PesudoDomain"/>
-    </typeAliases>
-    
+		<typeAlias alias="PesudoDomain" type="com.gl.ecomm.model.PesudoDomain" />
+	</typeAliases>
+
 	<environments default="development">
 		<environment id="development">
 			<transactionManager type="JDBC" />
@@ -21,6 +21,7 @@
 			</dataSource>
 		</environment>
 	</environments>
+
 	<mappers>
 		<mapper resource="com/gl/ecomm/mapper/PesudoDomainMapper.xml" />
 	</mappers>
