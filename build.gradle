@@ -33,9 +33,11 @@ dependencies{
   compile "com.alibaba:druid:1.0.18"
   compile "com.mchange:c3p0:+"
   compile "com.jolbox:bonecp:+"
+  compile "org.apache.tomcat:tomcat-jdbc:9.0.0.M4"
   compile "org.apache.commons:commons-dbcp2:2.1.1"
   runtime "mysql:mysql-connector-java:${mysqlConnectionVersion}"
   
+  compile "org.springframework:spring-jdbc:${springFrameworkVersion}"
   compile("org.springframework:spring-context:${springFrameworkVersion}")
   testCompile "junit:junit:+"
   testCompile("org.springframework:spring-test:${springFrameworkVersion}")
