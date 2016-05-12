@@ -5,4 +5,5 @@ import com.gl.ecomm.roadAccident.model.WeatherConditions;
 public interface WeatherConditionsService {
 	WeatherConditions getWeatherConditions(Integer code);
 	void addWeatherConditions(WeatherConditions wc);
+	void clear();
 }

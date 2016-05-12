@@ -17,12 +17,19 @@ public class RoadAccidentsBootStrap {
 		ctx.setConfigLocations("road-accidents/config/spring-data-source.xml",
 				"road-accidents/config/spring-application-context.xml");
 		ctx.refresh();
+		
 
 		WeatherConditionsService wcs = ctx.getBean("weatherConditionsService", WeatherConditionsService.class);
 
 		WeatherConditions wc = wcs.getWeatherConditions(1);
 
-		System.out.println("WC:" + wc.getLabel());
+		System.out.println("WC:" + (wc==null? wc:wc.getLabel()));
+		
+		wcs.clear();
+		
+		WeatherConditions wcAfterClear = wcs.getWeatherConditions(1);
+
+		System.out.println("WC wcAfterClear:" + wcAfterClear);
 
 		WeatherConditions wc1 = new WeatherConditions();
 		wc1.setCode(1);
@@ -32,7 +39,7 @@ public class RoadAccidentsBootStrap {
 
 		WeatherConditions wc2 = wcs.getWeatherConditions(1);
 
-		System.out.println("WC:" + wc2.getLabel());
+		System.out.println("WC:" + (wc2==null ? wc2 :wc2.getLabel()));
 
 		((ClassPathXmlApplicationContext) ctx).close();
 	}

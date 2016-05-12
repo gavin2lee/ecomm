@@ -21,3 +21,42 @@ create user 'gavin'@'%' identified by '123456';
 grant all privileges on *.* to 'gavin'@'%' with grant option;
 show grants for 'gavin'@'%';
 GRANT ALL PRIVILEGES ON *.* TO 'monty'@'%' WITH GRANT OPTION;
+
+
+一对一关联查询
+<mapper namespace="mobile">  
+     <resultMap id="userResultMap" type="Mobile">   
+        <id property="id" column="id"/>  
+        <result property="telnumber" column="telnumber"/>  
+        <association property="user" javaType="User">  
+               <id property="id" column="id"/>   
+               <result property="userName" column="name"/>   
+               <result property="password" column="pass"/>   
+        </association>  
+     </resultMap>  
+      
+    <!--多表查询操作-->  
+    <select id="selectMobile" parameterType="int"  resultMap="userResultMap" >  
+        <!--分别为mobile的主键id与user的主键id赋值别名,避免因为两个表字段名称相同而注入到对应对象名称冲突-->  
+        select m.id m_id,m.telnumber,u.id u_id,u.name,u.pass from t_mobile m,t_user u where m.userid = u.id and m.id = #{id}   
+    </select>  
+</mapper>  
+
+一对多关联查询
+<mapper namespace="user">  
+     <resultMap id="userResultMap" type="User">   
+        <id property="id" column="id" javaType="int" jdbcType="INTEGER" />  
+        <result property="userName" column="name" javaType="string" jdbcType="VARCHAR"/>  
+        <result property="password" column="pass" javaType="string" jdbcType="VARCHAR"/>  
+        <collection property="mobiles" column="userid" ofType="Mobile">    
+            <id property="id" column="id" javaType="int" jdbcType="INTEGER"/>    
+            <result property="telnumber" column="telnumber" javaType="string" jdbcType="VARCHAR"/>    
+        </collection>    
+     </resultMap>  
+      
+    <!--多表查询操作-->  
+    <select id="selectUser" parameterType="int"  resultMap="userResultMap" >  
+        <!--分别为mobile的主键id与user的主键id赋值别名,避免因为两个表字段名称相同而注入到对应对象名称冲突-->  
+        select m.id m_id,m.telnumber,u.id u_id,u.name,u.pass from t_mobile m,t_user u where m.userid = u.id and u.id = #{id}   
+    </select>  
+</mapper>  

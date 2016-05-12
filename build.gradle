@@ -39,6 +39,9 @@ dependencies{
   
   compile "org.springframework:spring-jdbc:${springFrameworkVersion}"
   compile("org.springframework:spring-context:${springFrameworkVersion}")
+  compile "org.springframework:spring-aspects:${springFrameworkVersion}"
+  compile "org.springframework:spring-orm:${springFrameworkVersion}"
+  
   testCompile "junit:junit:+"
   testCompile("org.springframework:spring-test:${springFrameworkVersion}")
 }

@@ -1,5 +1,6 @@
 package com.gl.ecomm.roadAccident.mapper;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -12,4 +13,7 @@ public interface WeatherConditionsMapper {
 	
 	@Insert("insert into weather_conditions (code, label) values (#{code}, #{label})")
 	void insertWeatherConditions(WeatherConditions wc);
+	
+	@Delete("TRUNCATE TABLE weather_conditions")
+	void truncate();
 }

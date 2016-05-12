@@ -28,4 +28,9 @@ public class WeatherConditionsServiceImpl implements WeatherConditionsService {
 		weatherConditionsMapper.insertWeatherConditions(wc);
 	}
 
+	@Override
+	public void clear() {
+		weatherConditionsMapper.truncate();
+	}
+
 }
